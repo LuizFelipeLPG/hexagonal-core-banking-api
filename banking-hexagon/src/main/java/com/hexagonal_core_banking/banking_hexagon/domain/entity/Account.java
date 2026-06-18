@@ -17,7 +17,6 @@ public class Account {
 
     public Account(String bank, String branch, String accountNumber, Double balance, AccountHolderId accountHolderId, Limit limit, boolean active) {
         validate(bank, branch, accountNumber, balance, accountHolderId, limit);
-        this.accountId = new AccountId();
         this.bank = bank;
         this.branch = branch;
         this.accountNumber = accountNumber;
@@ -47,7 +46,7 @@ public class Account {
         }
 
         if (balance == null || balance  < 0) {
-            sb.append("balance must be greater than 0");
+            sb.append("balance must be greater than or equal to zero");
         }
 
         if (accountHolderId == null) {
