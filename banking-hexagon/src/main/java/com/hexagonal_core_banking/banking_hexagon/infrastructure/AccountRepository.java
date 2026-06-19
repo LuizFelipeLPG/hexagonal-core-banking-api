@@ -1,10 +1,10 @@
-package com.hexagonal_core_banking.banking_hexagon.port.driven;
+package com.hexagonal_core_banking.banking_hexagon.infrastructure;
 
 import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
 import java.util.List;
 import java.util.UUID;
 
-public interface AccountDrivenPort {
+public interface AccountRepository {
     AccountDTO save(AccountDTO accountDTO);
     AccountDTO update(AccountDTO accountDTO);
     List<AccountDTO> findAll();
@@ -14,3 +14,6 @@ public interface AccountDrivenPort {
     void debit(UUID id, Double amount);
     Double getBalance(UUID id);
 }
+
+
+ 
