@@ -6,7 +6,7 @@ public record AccountRequest(
     String accountNumber,
     Double balance,
     String accountHolderId,
-    String limit,
+    String limits,
     String active
 
 ) {

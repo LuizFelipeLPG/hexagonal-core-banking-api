@@ -27,10 +27,7 @@
 			<groupId>com.hexagonal_core_banking</groupId>
 			<artifactId>banking-hexagon</artifactId>
 		</dependency>
-			<dependency>
-			<groupId>com.hexagonal_core_banking</groupId>
-			<artifactId>banking-h2-adapter</artifactId>
-		</dependency>
+			
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

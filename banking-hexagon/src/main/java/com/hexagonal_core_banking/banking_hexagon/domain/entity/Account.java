@@ -12,21 +12,21 @@ public class Account {
     private final String accountNumber;
     private Double balance = 0.0;
     private final AccountHolderId accountHolderId;
-    private Limit limit;
+    private Limit limits;
     private boolean active;
 
-    public Account(String bank, String branch, String accountNumber, Double balance, AccountHolderId accountHolderId, Limit limit, boolean active) {
-        validate(bank, branch, accountNumber, balance, accountHolderId, limit);
+    public Account(String bank, String branch, String accountNumber, Double balance, AccountHolderId accountHolderId, Limit limits, boolean active) {
+        validate(bank, branch, accountNumber, balance, accountHolderId, limits);
         this.bank = bank;
         this.branch = branch;
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountHolderId = accountHolderId;
-        this.limit = limit;
+        this.limits = limits;
         this.active = active;
     }
 
-    private void validate(String bank, String branch, String accountNumber, Double balance, AccountHolderId accountHolderId, Limit limit) {
+    private void validate(String bank, String branch, String accountNumber, Double balance, AccountHolderId accountHolderId, Limit limits) {
         StringBuilder sb = new StringBuilder();
 
         final int ACCOUNT_NUMBER_LENGTH = 8;
@@ -53,8 +53,8 @@ public class Account {
             sb.append("accountHolderId cannot be null");
         }
 
-        if (limit == null) {
-            sb.append("limit cannot be null");
+        if (limits == null) {
+            sb.append("limits cannot be null");
         }
 
         BankingValidationException.when(!sb.isEmpty(), sb.toString().trim());
@@ -77,8 +77,8 @@ public class Account {
         this.balance = balance;
     }
 
-    public void setLimit(Limit limit) {
-        this.limit = limit;
+    public void setLimit(Limit limits) {
+        this.limits = limits;
     }
 
     public void setActive(boolean active) {
@@ -109,8 +109,8 @@ public class Account {
         return accountHolderId;
     }
 
-    public Limit getLimit() {
-        return limit;
+    public Limit getLimits() {
+        return limits;
     }
 
     public boolean isActive() {

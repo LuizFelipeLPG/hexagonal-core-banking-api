@@ -14,7 +14,7 @@ public class AccountMapper {
             account.getAccountNumber(),
             account.getBalance(),
             account.getAccountHolderId().id(),
-            account.getLimit().toString(),
+            account.getLimits().toString(),
             account.isActive()
         );
     }
@@ -26,7 +26,7 @@ public class AccountMapper {
             accountDTO.accountNumber(),
             accountDTO.balance(),
             new AccountHolderId(accountDTO.accountHolderId()),
-            toLimit(accountDTO.limit()),
+            toLimit(accountDTO.limits()),
             accountDTO.active()
             );
     }

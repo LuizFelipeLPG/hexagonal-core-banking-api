@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
 import com.hexagonal_core_banking.banking_mysql_adapter.infrastructure.entity.AccountEntity;
 
-@Component
+@Component("accountMapperMysql")
 public class AccountMapper{    
     public AccountEntity toEntity(AccountDTO accountDTO) {
         AccountEntity entity = new AccountEntity();
@@ -22,7 +22,7 @@ public class AccountMapper{
             entity.getAccountNumber(),
             entity.getBalance(),
             entity.getAccountHolderId(),
-            entity.getLimit(),
+            entity.getLimits(),
             entity.isActive()
         );
     }    

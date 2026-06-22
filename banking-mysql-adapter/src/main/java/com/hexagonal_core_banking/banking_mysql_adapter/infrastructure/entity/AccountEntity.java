@@ -32,8 +32,8 @@ public class AccountEntity {
     @NotNull(message = "Account holder ID cannot be null")
     @Column(name = "account_holder_id")
     private UUID accountHolderId;
-    @NotNull(message = "Limit cannot be null")
-    private String limit;
+    @NotNull(message = "Limits cannot be null")
+    private String limits;
     @Column(name = "is_active", nullable = false)
     private boolean active = true;
 
