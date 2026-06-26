@@ -12,13 +12,12 @@ import com.hexagonal_core_banking.banking_h2_adapter.infrastructure.entity.Accou
 import com.hexagonal_core_banking.banking_h2_adapter.infrastructure.repository.AccountJpaRepository;
 import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
 import com.hexagonal_core_banking.banking_hexagon.port.driven.AccountDrivenPort;
+import com.hexagonal_core_banking.banking_hexagon.port.driver.AccountDriverPort;
 
 import jakarta.transaction.Transactional;
 
-
-
 @Service("h2")
-public class AccountInMemoryService implements AccountDrivenPort {
+public class AccountInMemoryService implements AccountDrivenPort, AccountDriverPort {
     private final AccountJpaRepository accountJpaRepository;
     private final AccountMapper mapper;
 

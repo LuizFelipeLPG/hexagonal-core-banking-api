@@ -36,4 +36,35 @@ public class AccountEntity {
     @Column(name = "is_active", nullable = false)
     private boolean active = true;
 
+    public UUID getAccountId() {
+    return accountId;
+}
+
+public String getBank() {
+    return bank;
+}
+
+public String getBranch() {
+    return branch;
+}
+
+public String getAccountNumber() {
+    return accountNumber;
+}
+
+public Double getBalance() {
+    return balance;
+}
+
+public UUID getAccountHolderId() {
+    return accountHolderId;
+}
+
+public String getLimits() {
+    return limits;
+}
+
+public boolean isActive() {
+    return active;
+}
 }

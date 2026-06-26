@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.hexagonal_core_banking")
+@ComponentScan("com.hexagonal_core_banking.banking_api")
 public class BankingApiApplication {
 
 	public static void main(String[] args) {

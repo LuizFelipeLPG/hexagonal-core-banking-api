@@ -1,26 +1,25 @@
 package com.hexagonal_core_banking.banking_mysql_adapter.application.service;
 
-import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
-import com.hexagonal_core_banking.banking_hexagon.port.driven.AccountDrivenPort;
-
-import jakarta.transaction.Transactional;
-
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
+import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
+import com.hexagonal_core_banking.banking_hexagon.port.driven.AccountDrivenPort;
+import com.hexagonal_core_banking.banking_hexagon.port.driver.AccountDriverPort;
+import com.hexagonal_core_banking.banking_mysql_adapter.application.mapper.AccountMapper;
 import com.hexagonal_core_banking.banking_mysql_adapter.infrastructure.entity.AccountEntity;
 import com.hexagonal_core_banking.banking_mysql_adapter.infrastructure.repository.AccountJpaRepository;
-import com.hexagonal_core_banking.banking_mysql_adapter.application.mapper.AccountMapper;
+
+import jakarta.transaction.Transactional;
 
 @Service("mysql")
 @Primary
-public class AccountMySQLService implements AccountDrivenPort{
+public class AccountMySQLService implements AccountDrivenPort, AccountDriverPort{
     private final AccountJpaRepository accountJpaRepository;
     private final AccountMapper mapper;
 

@@ -1,12 +1,14 @@
 package com.hexagonal_core_banking.banking_h2_adapter.application.mapper;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.hexagonal_core_banking.banking_h2_adapter.infrastructure.entity.AccountEntity;
 import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
 
-@Component("accountMapperH2")
+@Component
+@Profile("h2")
 public class AccountMapper {
     public AccountEntity toEntity(AccountDTO accountDTO) {
         AccountEntity entity = new AccountEntity();

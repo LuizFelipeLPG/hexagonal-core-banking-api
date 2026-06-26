@@ -1,12 +1,14 @@
 package com.hexagonal_core_banking.banking_mysql_adapter.application.mapper;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.hexagonal_core_banking.banking_hexagon.domain.dto.AccountDTO;
 import com.hexagonal_core_banking.banking_mysql_adapter.infrastructure.entity.AccountEntity;
 
-@Component("accountMapperMysql")
+@Component
+@Profile("mysql")
 public class AccountMapper{    
     public AccountEntity toEntity(AccountDTO accountDTO) {
         AccountEntity entity = new AccountEntity();

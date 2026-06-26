@@ -1,60 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+    <modelVersion>4.0.0</modelVersion>
 
-	
-	<groupId>com.hexagonal_core_banking</groupId>
-	<artifactId>hexagonal-core-banking-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	
-	<name>Hexagonal Core Banking API</name>
-	<description>Arquitetura hexagonal para aplicação de core banking</description>
-	<url>https://github.com/LuizFelipeLPG/hexagonal-core-banking-api</url>
-	
-	<licenses>
-		<license>
-			<name>MIT License</name>
-			<url>https://opensource.org/licenses/MIT</url>
-		</license>
-	</licenses>
-	
-	<developers>
-		<developer>
-			<id>luiz</id>
-			<name>Luiz Felipe Lopes Pessoa de Goes</name>
-			<email>luizfelipelpg2004@gmail.com</email>
-		</developer>
-	</developers>
-	
-	<scm>
-		<connection>scm:git:https://github.com/LuizFelipeLPG/hexagonal-core-banking-api.git</connection>
-		<developerConnection>scm:git:https://github.com/LuizFelipeLPG/hexagonal-core-banking-api.git</developerConnection>
-		<url>https://github.com/LuizFelipeLPG/hexagonal-core-banking-api</url>
-		<tag>HEAD</tag>
-	</scm>
-	
-	<modules>
-		<module>banking-parent</module>
-		<module>banking-api</module>
-		<module>banking-hexagon</module>
-		<module>banking-h2-adapter</module>
-		<module>banking-mysql-adapter</module>
-	</modules>
-	
-	<properties>
-		<java.version>17</java.version>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-	
+    <!-- Spring Boot Parent -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.5</version>
+        <relativePath/>
+    </parent>
+
+    <!-- Informações do Projeto -->
+    <groupId>com.hexagonal_core_banking</groupId>
+    <artifactId>hexagonal-core-banking-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Hexagonal Core Banking API</name>
+    <description>Arquitetura Hexagonal aplicada a uma API de Core Banking utilizando Spring Boot.</description>
+
+    <url>https://github.com/LuizFelipeLPG/hexagonal-core-banking-api</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>luiz</id>
+            <name>Luiz Felipe Lopes Pessoa de Goes</name>
+            <email>luizfelipelpg2004@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/LuizFelipeLPG/hexagonal-core-banking-api.git</connection>
+        <developerConnection>scm:git:https://github.com/LuizFelipeLPG/hexagonal-core-banking-api.git</developerConnection>
+        <url>https://github.com/LuizFelipeLPG/hexagonal-core-banking-api</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- Módulos -->
+    <modules>
+        <module>banking-parent</module>
+        <module>banking-hexagon</module>
+        <module>banking-h2-adapter</module>
+        <module>banking-mysql-adapter</module>
+        <module>banking-api</module>
+    </modules>
+
 </project>
